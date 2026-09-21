@@ -1,0 +1,334 @@
+---
+name: evd-position-leveling-safety
+description: Assess external ventricular drain (EVD) positioning and leveling safety in relation to patient position and the prescribed reference level. Use this skill when a nursing agent needs to identify potential leveling errors, patient-position changes, drainage-system position changes, or situations requiring human verification.
+---
+
+# EVD Position and Leveling Safety
+
+## 1. Purpose
+
+This skill provides a structured workflow for identifying potential safety risks related to external ventricular drain (EVD) positioning and leveling.
+
+The primary purpose is to help a nursing agent recognize whether available information suggests that the EVD drainage system may no longer be positioned according to the prescribed reference level after a patient-position change or device movement.
+
+The skill is intended for decision support and safety reminders.
+
+It does not independently determine EVD settings or replace bedside neurological assessment.
+
+## 2. Scope
+
+Use this skill when information concerns:
+
+- External ventricular drain (EVD)
+- Patient body position
+- EVD reference point
+- Drainage system level
+- Prescribed drainage height or level
+- Changes in patient position
+- Movement of the drainage system
+- Potential leveling errors
+- Unexpected changes in drainage
+- Need for bedside verification
+
+## 3. Required Inputs
+
+The agent should collect the following information when available.
+
+### Patient information
+
+- Current patient position
+- Recent change in patient position
+- Relevant neurological observations
+- Symptoms or clinical changes
+
+### EVD information
+
+- Confirmation that an EVD is present
+- Prescribed EVD level or drainage setting
+- Reference point specified by the clinical protocol or order
+- Current position of the drainage system
+- Whether the system has been moved
+
+### Positioning information
+
+- Relationship between the patient's current position and the reference point
+- Whether the drainage system has been re-leveled after repositioning
+- Whether the leveling process has been documented or confirmed
+
+### Clinical information
+
+- Drainage amount or trend when relevant
+- Sudden change in drainage
+- New neurological symptoms
+- Other concerning changes
+
+If the reference point or prescribed level is unknown, the agent must not invent a value.
+
+## 4. Core Safety Concept
+
+EVD drainage depends on the relative height between the drainage system and the prescribed anatomical reference point.
+
+Therefore, changes in patient position or movement of the drainage system can alter the relative pressure relationship.
+
+The agent should focus on whether the system has been appropriately rechecked and leveled after a relevant position change.
+
+The exact anatomical reference point and prescribed level must come from the applicable clinical order, institutional protocol, or device-specific procedure.
+
+## 5. Safety Assessment Workflow
+
+Follow the steps below in order.
+
+### Step 1: Confirm EVD presence
+
+Determine whether the patient has an EVD.
+
+If no EVD is present, this skill is not applicable.
+
+If EVD presence cannot be confirmed, report insufficient information.
+
+### Step 2: Identify the patient's current position
+
+Record the current patient position.
+
+Examples:
+
+- Supine
+- Head elevated
+- Sitting
+- Lateral position
+- Other documented position
+
+Determine whether the patient has recently changed position.
+
+### Step 3: Identify the prescribed reference point
+
+Determine the reference point used for EVD leveling according to the applicable clinical protocol or order.
+
+Do not substitute an assumed reference point if the relevant protocol is unavailable.
+
+If the reference point is unknown, classify the assessment as incomplete.
+
+### Step 4: Identify the prescribed EVD level
+
+Record the prescribed drainage level or height if available.
+
+Do not generate or estimate the prescribed value.
+
+If no prescribed value is available, explicitly state:
+
+`Prescribed EVD level not provided; clinical verification required.`
+
+### Step 5: Assess current leveling status
+
+Determine whether the drainage system is documented as leveled to the prescribed reference point.
+
+Classify the information as:
+
+- Level confirmed
+- Level potentially incorrect
+- Level unknown
+
+If the system was moved or the patient changed position and re-leveling is not documented, flag the need for human verification.
+
+### Step 6: Assess patient repositioning
+
+If the patient has changed position:
+
+1. Identify the new patient position.
+2. Determine whether the reference point has changed relative to the drainage system.
+3. Check whether the EVD system was re-leveled.
+4. Check whether the prescribed level remains correctly established.
+5. Check for relevant clinical changes.
+
+Do not assume that the previous leveling remains valid after repositioning.
+
+### Step 7: Assess drainage and clinical warning information
+
+Review available information for:
+
+- Sudden change in drainage
+- Unexpected absence or increase of drainage
+- New neurological symptoms
+- Change in consciousness
+- New headache, nausea, vomiting, or other documented symptoms
+- Other concerning changes temporally associated with patient repositioning or EVD manipulation
+
+The agent should not interpret these findings as a specific diagnosis.
+
+They should be treated as reasons for prompt clinical assessment.
+
+## 6. Risk Classification
+
+Classify the result into one of four categories.
+
+### A. No identified leveling risk
+
+Use when:
+
+- Patient position is known
+- Prescribed reference information is available
+- EVD level is documented as appropriately established
+- No relevant recent movement remains unchecked
+- No concerning clinical change is identified from available information
+
+Output:
+
+`No EVD position-related safety risk identified from the available information.`
+
+This does not mean that all clinical risks have been excluded.
+
+### B. Potential leveling risk
+
+Use when:
+
+- Patient position changed
+- Drainage system moved
+- Re-leveling is uncertain
+- The documented level may not correspond to the prescribed reference
+- Other position-related concerns are present
+
+Output should identify the specific concern and recommend bedside verification.
+
+### C. Urgent human verification required
+
+Use when information indicates a potentially significant safety concern, including:
+
+- EVD leveling appears inconsistent with the prescribed setting
+- Accidental movement or displacement is suspected
+- Sudden major change in drainage is reported
+- New neurological deterioration is reported
+- Information about the EVD configuration is contradictory
+
+The agent should not attempt to correct the EVD independently.
+
+### D. Insufficient information
+
+Use when important information is missing.
+
+Examples:
+
+- Reference point unknown
+- Prescribed EVD level unknown
+- Current patient position unknown
+- Current drainage system position unknown
+- Re-leveling status unknown
+
+The agent should state what information is missing.
+
+## 7. Output Format
+
+Return the assessment using the following structure:
+
+### EVD Position and Leveling Safety Assessment
+
+**EVD present:**  
+[Yes / No / Unknown]
+
+**Current patient position:**  
+[Documented position / Unknown]
+
+**Recent repositioning:**  
+[Yes / No / Unknown]
+
+**Reference point:**  
+[Documented reference point / Unknown]
+
+**Prescribed EVD level:**  
+[Documented level / Unknown]
+
+**Current leveling status:**  
+[Level confirmed / Potentially incorrect / Unknown]
+
+**Recent EVD system movement:**  
+[Yes / No / Unknown]
+
+**Drainage change:**  
+[None identified / Present / Unknown]
+
+**Neurological warning information:**  
+[None identified / Present / Unknown]
+
+**Risk classification:**  
+[No identified leveling risk / Potential leveling risk / Urgent human verification required / Insufficient information]
+
+**Reason:**  
+[Brief explanation based only on available information]
+
+**Human verification:**  
+[Not specifically indicated / Bedside verification recommended / Prompt clinical assessment required]
+
+## 8. Guardrails
+
+The agent must follow these rules.
+
+1. Do not independently determine or change the prescribed EVD level.
+
+2. Do not independently instruct the user to raise or lower the drainage system.
+
+3. Do not independently clamp, unclamp, open, or close the EVD system.
+
+4. Do not diagnose hydrocephalus, intracranial hypertension, overdrainage, underdrainage, or other neurological conditions solely from the available EVD positioning information.
+
+5. Do not infer the prescribed level if it has not been provided.
+
+6. Do not infer the reference point if the applicable protocol has not been established.
+
+7. Do not assume that a previously correct EVD level remains correct after patient repositioning.
+
+8. If information is contradictory, identify the contradiction and request human verification.
+
+9. If neurological deterioration or another significant clinical change is reported, prioritize prompt clinical assessment.
+
+10. Follow the applicable institutional protocol, physician orders, device instructions, and qualified nursing judgment.
+
+## 9. Human Oversight
+
+This skill is explicitly designed for human-AI collaboration.
+
+The agent should:
+
+- Detect potential position-related risks
+- Identify possible leveling problems
+- Organize relevant information
+- Identify missing information
+- Explain why human verification may be necessary
+
+The agent should not:
+
+- Independently manipulate the EVD
+- Independently modify the drainage level
+- Replace neurological assessment
+- Replace clinical decision-making
+
+Final bedside assessment and clinical decisions remain the responsibility of qualified healthcare professionals.
+
+## 10. Example
+
+### Input
+
+Patient has an EVD.
+
+Current position: head elevated.
+
+Previous position: supine.
+
+The patient was repositioned approximately 10 minutes ago.
+
+EVD system: movement not documented.
+
+Prescribed EVD level: available.
+
+Re-leveling after repositioning: not documented.
+
+Clinical status: new headache reported.
+
+### Agent Output
+
+**Risk classification:**  
+Urgent human verification required.
+
+**Reason:**  
+The patient's position has changed, but documentation does not confirm that the EVD system was re-leveled after repositioning. A new headache is also reported.
+
+**Human verification:**  
+Prompt bedside assessment of the patient's neurological status and EVD leveling is required. The agent does not independently determine or change the EVD level.
